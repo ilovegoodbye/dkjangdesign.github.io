@@ -1,11 +1,10 @@
 <html lang="ko">
-
 <head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <title>DK J - 포트폴리오</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>DK J - 포트폴리오</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<style>
     @font-face {
       font-family: 'IBMPlexSans';
       src: url('IBMPlexSans-VariableFont_wdth,wght.ttf') format('truetype');
@@ -309,185 +308,248 @@
     #goTopBtn:hover {
       opacity: 1;
     }
-  </style>
+  
+
+@media screen and (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+    letter-spacing: 1.2px;
+    padding-bottom: 1rem;
+  }
+
+  nav a {
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .header-title {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .header-overlay h1 {
+    font-size: 1.8rem;
+  }
+
+  .header-overlay p {
+    font-size: 1rem;
+  }
+
+  .project-info h4 {
+    font-size: 1.1rem;
+    padding-left: 1rem;
+  }
+
+  .project-info p {
+    font-size: 0.7rem;
+    padding-left: 1rem;
+  }
+
+  .custom-list {
+    padding-left: 1rem;
+  }
+
+  .custom-list li {
+    font-size: 0.75rem;
+  }
+
+  .contact-section {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+  }
+
+  .contact-message, .contact-info {
+    margin: 0.5rem 0;
+  }
+
+  .detail-content {
+    max-width: 90vw;
+    padding: 2rem 1rem;
+  }
+
+  .detail-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .detail-content p, .detail-content li {
+    font-size: 0.9rem;
+  }
+}
+</style>
 </head>
-
 <body>
-  <!--Header-->
-  <header class="header-title border-bottom">
-    <h1 class="fw-bold mb-1">DK J</h1>
-    <h5 class="text-secondary mb-2">Action Game Designer</h5>
-    <p class="text-secondary small mb-0">경기 성남 | 010-9163-6342 | Whzhvkdl@gmail.com</p>
-    <nav class="d-flex justify-content-end  px-1 py-1 gap-3" style="background-color: #111;">
-      <a href="/" class="text-decoration-none text-light" onclick="scrollToTop()">Home</a>
-      <a href="#project-list" class="text-decoration-none text-light">Projects</a>
-      <a href="#Prototypes-list" class="text-decoration-none text-light">Prototypes</a>
-      <a href="resume.pdf" target="_blank" class="text-decoration-none text-light">Resume</a>
-    </nav>
-  </header>
-  <div class="header-video-wrapper py-4 border-bottom border-top" id="headerMoive">
-    <video autoplay muted loop playsinline style="pointer-events: none;" class="header-video">
-      <source src="images/MainVideo.webm" type="video/webm">
-    </video>
-    <div class="header-overlay">
-      <h1>DaeKyu Jang</h1>
-      <p>Action Game Designer</p>
-    </div>
-  </div>
-  <!-- 상세 페이지 탭 -->
-  <div id="detail-tab" class="detail-tab" style="display: none;">
-    <div id="detail-background" class="detail-background"></div>
-    <div id="detail-content" class="detail-content">
-      <h2 class="text-info">상세 페이지</h2>
-      <p>여기에 클릭한 프로젝트의 상세 설명이 표시될 예정입니다.</p>
-    </div>
-    <div id="detail-storage" style="display: none;">
-      <div id="detail-asura">
-        <button class="btn btn-outline-light mb-4" onclick="goBack()">← 뒤로가기</button>
-        <h2 class="text-info">아수라장 (ASURAJANG)</h2>
-        <p>쿼터뷰 액션 배틀로얄 | 언리얼 엔진 5 기반</p>
-        <img alt="아수라장 이미지" src="images/asurajang2.png" style="max-width: 100%; margin-bottom: 1rem;" />
-        <ul class="custom-list">
-          <li>6종 이상의 캐릭터 액션 설계 및 전투 디자인</li>
-          <li>장비 스탯 및 옵션 밸런싱</li>
-          <li>UI/UX 시스템 설계 (핑, 훈련장, 튜토리얼 등)</li>
-        </ul>
-        <video controls="" src="media/asura_trailer.mp4" style="max-width: 100%; margin-top: 1rem;"></video>
-      </div>
-      <div id="detail-kritika">
-        <button class="btn btn-outline-light mt-1" onclick="goBack()">← 뒤로가기</button>
-        <h2 class="text-info">크리티카 (KRITIKA)</h2>
-        <p>3인칭 MORPG | PC 온라인</p>
-        <img alt="크리티카 이미지" src="images/kritika2.png" style="max-width: 100%; margin-bottom: 1rem;" />
-        <ul class="custom-list">
-          <li>전사(여), 귀검제 등 신규 클래스 설계</li>
-          <li>백운 외전 클래스 제작</li>
-          <li>어빌리티 시스템 구조 개편</li>
-        </ul>
-      </div>
-      <div id="detail-Prototypes1">
-        <button class="btn btn-outline-light mb-4" onclick="goBack()">← 뒤로가기</button>
-        <h2 class="text-info">Prototypes1 (KRITIKA)</h2>
-        <p>3인칭 MORPG | PC 온라인</p>
-        <img alt="Prototypes1 이미지" src="images/kritika2.png" style="max-width: 100%; margin-bottom: 1rem;" />
-        <ul class="custom-list">
-          <li>전사(여), 귀검제 등 신규 클래스 설계</li>
-          <li>백운 외전 클래스 제작</li>
-          <li>어빌리티 시스템 구조 개편</li>
-        </ul>
-      </div>
-      <div id="detail-Prototypes2">
-        <h2 class="text-info">Prototypes2 (KRITIKA)</h2>
-        <p>3인칭 MORPG | PC 온라인</p>
-        <img alt="Prototypes2 이미지" src="images/kritika2.png" style="max-width: 100%; margin-bottom: 1rem;" />
-        <ul class="custom-list">
-          <li>전사(여), 귀검제 등 신규 클래스 설계</li>
-          <li>백운 외전 클래스 제작</li>
-          <li>어빌리티 시스템 구조 개편</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <!--Projects-->
-  <div id="project-list">
-    <div class="container px-0 py-5" style="width: 94.5vw; max-width: 95.5%; margin: 0 auto;">
-      <h2 class="section-title">Projects</h2>
-      <!-- 아수라장 -->
-      <div>
-        <section class="project-block">
-          <div class=" border border-secondary rounded-0 p-0 mb-0 w-100" style="overflow: hidden;">
-            <div class="row gx-4 align-items-center">
-              <div class="project-card flex-shrink-0" onclick="showDetailTab('asura')" style="flex: 1 1 95%; max-width: 55%; aspect-ratio: 21/9; overflow: hidden; position: relative; 
+<!--Header-->
+<header class="header-title border-bottom">
+<h1 class="fw-bold mb-1">DK J</h1>
+<h5 class="text-secondary mb-2">Action Game Designer</h5>
+<p class="text-secondary small mb-0">경기 성남 | 010-9163-6342 | Whzhvkdl@gmail.com</p>
+<nav class="d-flex justify-content-end px-1 py-1 gap-3" style="background-color: #111;">
+<a class="text-decoration-none text-light" href="/" onclick="scrollToTop()">Home</a>
+<a class="text-decoration-none text-light" href="#project-list">Projects</a>
+<a class="text-decoration-none text-light" href="#Prototypes-list">Prototypes</a>
+<a class="text-decoration-none text-light" href="resume.pdf" target="_blank">Resume</a>
+</nav>
+</header>
+<div class="header-video-wrapper py-4 border-bottom border-top" id="headerMoive">
+<video autoplay="" class="header-video" loop="" muted="" playsinline="" style="pointer-events: none;">
+<source src="images/MainVideo.webm" type="video/webm"/>
+</video>
+<div class="header-overlay">
+<h1>DaeKyu Jang</h1>
+<p>Action Game Designer</p>
+</div>
+</div>
+<!-- 상세 페이지 탭 -->
+<div class="detail-tab" id="detail-tab" style="display: none;">
+<div class="detail-background" id="detail-background"></div>
+<div class="detail-content" id="detail-content">
+<h2 class="text-info">상세 페이지</h2>
+<p>여기에 클릭한 프로젝트의 상세 설명이 표시될 예정입니다.</p>
+</div>
+<div id="detail-storage" style="display: none;">
+<div id="detail-asura">
+<button class="btn btn-outline-light mb-4" onclick="goBack()">← 뒤로가기</button>
+<h2 class="text-info">아수라장 (ASURAJANG)</h2>
+<p>쿼터뷰 액션 배틀로얄 | 언리얼 엔진 5 기반</p>
+<img alt="아수라장 이미지" src="images/asurajang2.png" style="max-width: 100%; margin-bottom: 1rem;"/>
+<ul class="custom-list">
+<li>6종 이상의 캐릭터 액션 설계 및 전투 디자인</li>
+<li>장비 스탯 및 옵션 밸런싱</li>
+<li>UI/UX 시스템 설계 (핑, 훈련장, 튜토리얼 등)</li>
+</ul>
+<video controls="" src="media/asura_trailer.mp4" style="max-width: 100%; margin-top: 1rem;"></video>
+</div>
+<div id="detail-kritika">
+<button class="btn btn-outline-light mt-1" onclick="goBack()">← 뒤로가기</button>
+<h2 class="text-info">크리티카 (KRITIKA)</h2>
+<p>3인칭 MORPG | PC 온라인</p>
+<img alt="크리티카 이미지" src="images/kritika2.png" style="max-width: 100%; margin-bottom: 1rem;"/>
+<ul class="custom-list">
+<li>전사(여), 귀검제 등 신규 클래스 설계</li>
+<li>백운 외전 클래스 제작</li>
+<li>어빌리티 시스템 구조 개편</li>
+</ul>
+</div>
+<div id="detail-Prototypes1">
+<button class="btn btn-outline-light mb-4" onclick="goBack()">← 뒤로가기</button>
+<h2 class="text-info">Prototypes1 (KRITIKA)</h2>
+<p>3인칭 MORPG | PC 온라인</p>
+<img alt="Prototypes1 이미지" src="images/kritika2.png" style="max-width: 100%; margin-bottom: 1rem;"/>
+<ul class="custom-list">
+<li>전사(여), 귀검제 등 신규 클래스 설계</li>
+<li>백운 외전 클래스 제작</li>
+<li>어빌리티 시스템 구조 개편</li>
+</ul>
+</div>
+<div id="detail-Prototypes2">
+<h2 class="text-info">Prototypes2 (KRITIKA)</h2>
+<p>3인칭 MORPG | PC 온라인</p>
+<img alt="Prototypes2 이미지" src="images/kritika2.png" style="max-width: 100%; margin-bottom: 1rem;"/>
+<ul class="custom-list">
+<li>전사(여), 귀검제 등 신규 클래스 설계</li>
+<li>백운 외전 클래스 제작</li>
+<li>어빌리티 시스템 구조 개편</li>
+</ul>
+</div>
+</div>
+</div>
+<!--Projects-->
+<div id="project-list">
+<div class="container px-0 py-5" style="width: 94.5vw; max-width: 95.5%; margin: 0 auto;">
+<h2 class="section-title">Projects</h2>
+<!-- 아수라장 -->
+<div>
+<section class="project-block">
+<div class="border border-secondary rounded-0 p-0 mb-0 w-100" style="overflow: hidden;">
+<div class="row gx-4 align-items-center">
+<div class="project-card flex-shrink-0" onclick="showDetailTab('asura')" style="flex: 1 1 95%; max-width: 55%; aspect-ratio: 21/9; overflow: hidden; position: relative; 
       cursor: pointer;">
-                <img alt="아수라장 이미지" src="images/asurajang2.png" style="height:100%; width:100%; object-fit:cover;" />
-              </div>
-              <div class="flex-grow-1 project-info" style="flex: 1 1 45%;">
-                <h4>아수라장 (ASURAJANG) | D-ZARD</h4>
-                <p>Quarter View | Action | Battle Royale | Unreal Engine 5 | PC</p>
-                <p>February 2023 - present</p>
-                <p>담당 : Combat Designer, System Designer, Level Designer</p>
-                <ul class="custom-list" id="asura-detail" style="display: block;">
-                  <li>20명 이상의 팀원과 협업하여 '아수라장(ASURAJANG)" 개발에 참여 및 Steam(PC), Xbox, Ps 출시</li>
-                  <li>약 25종 이상의 장비 스텟 및 옵션 밸런싱</li>
-                  <li>약 6종 이상의 캐릭터의 액션 설계 및 구현</li>
-                  <li>캐릭터의 전투 밸런스를 조정하고 해당 시뮬레이션을 문서화하여 정리</li>
-                  <li>훈련장의 동선 및 튜토리얼 시스템을 설계, 엔지니어 및 아티스트와의 협업을 통해 개선</li>
-                  <li>계정, 핑, 랭킹창, 파티원 정보 등 다양한 UI/UX를 설계</li>
-                </ul>
-                <button class="btn btn-outline-info btn-lg mt-2" style="margin-left: 1.5rem;"
-                  onclick="showDetailTab('asura')">View more →</button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <!-- 크리티카 -->
-      <div>
-        <section class="project-block">
-          <div class="border border-secondary rounded-0 p-0 mb-0 w-100" style="overflow: hidden;">
-            <div class="row gx-4 align-items-center">
-              <div class="project-card flex-shrink-0" onclick="showDetailTab('kritika')" style="flex: 1 1 95%; max-width: 55%; aspect-ratio: 21/9; overflow: hidden; position: relative; 
+<img alt="아수라장 이미지" src="images/asurajang2.png" style="height:100%; width:100%; object-fit:cover;"/>
+</div>
+<div class="flex-grow-1 project-info" style="flex: 1 1 45%;">
+<h4>아수라장 (ASURAJANG) | D-ZARD</h4>
+<p>Quarter View | Action | Battle Royale | Unreal Engine 5 | PC</p>
+<p>February 2023 - present</p>
+<p>담당 : Combat Designer, System Designer, Level Designer</p>
+<ul class="custom-list" id="asura-detail" style="display: block;">
+<li>20명 이상의 팀원과 협업하여 '아수라장(ASURAJANG)" 개발에 참여 및 Steam(PC), Xbox, Ps 출시</li>
+<li>약 25종 이상의 장비 스텟 및 옵션 밸런싱</li>
+<li>약 6종 이상의 캐릭터의 액션 설계 및 구현</li>
+<li>캐릭터의 전투 밸런스를 조정하고 해당 시뮬레이션을 문서화하여 정리</li>
+<li>훈련장의 동선 및 튜토리얼 시스템을 설계, 엔지니어 및 아티스트와의 협업을 통해 개선</li>
+<li>계정, 핑, 랭킹창, 파티원 정보 등 다양한 UI/UX를 설계</li>
+</ul>
+<button class="btn btn-outline-info btn-lg mt-2" onclick="showDetailTab('asura')" style="margin-left: 1.5rem;">View more →</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- 크리티카 -->
+<div>
+<section class="project-block">
+<div class="border border-secondary rounded-0 p-0 mb-0 w-100" style="overflow: hidden;">
+<div class="row gx-4 align-items-center">
+<div class="project-card flex-shrink-0" onclick="showDetailTab('kritika')" style="flex: 1 1 95%; max-width: 55%; aspect-ratio: 21/9; overflow: hidden; position: relative; 
       cursor: pointer;">
-                <img alt="크리티카 이미지" src="images/kritika2.png" style="height:100%; width:100%; object-fit:cover;" />
-              </div>
-              <div class="flex-grow-1 project-info" style="flex: 1 1 45%;">
-                <h4>크리티카 (KRITIKA) | ALLM</h4>
-                <p>Thrid-person | Action | MORPG | Proprietary Engine | PC</p>
-                <p>February 2019 ~ February 2022</p>
-                <p>담당 : Combat Designer </p>
-                <ul class="custom-list" id="kritika-detail" style="display: block;">
-                  <li>전사(여), 귀검제 클래스 제작</li>
-                  <li>시공간술사, 헤일로메이지 초극 담당</li>
-                  <li>백운 외전 클래스 제작</li>
-                  <li>전 캐릭터 밸런스 개편</li>
-                  <li>어빌리티 시스템 레벨 연동 구조 개편을 통한 전 캐릭터 밸런스 조정</li>
-                </ul>
-                <button class="btn btn-outline-info btn-lg mt-2" style="margin-left: 1.5rem;"
-                  onclick="showDetailTab('kritika')">View more →</button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  </div>
-  <!--Prototypes-->
-  <div id="Prototypes-list">
-    <div class="container px-0 py-1" style="width: 20vw; max-width: 96%; margin: 0 auto;">
-      <h2 class="section-title">Prototypes</h2>
-      <!-- 프로토타입1 -->
-      <div onclick="showDetailTab('Prototypes1')">
-        <section class="Prototypes-block">
-          <div class="Prototypes-card border border-secondary rounded-0 p-0 mb-0 w-100">
-            <div class="row gx-4 align-items-center" style="overflow: hidden;">
-              <div class="flex-shrink-0"
-                style="flex: 1 1 100%; max-width: 100%; aspect-ratio: 16/9; overflow: hidden; position: relative; ">
-                <img alt="프로토타입1 이미지" src="images/asurajang2.png" style="height:100%; width:100%; object-fit:cover;" />
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  </div>
-
-  <!--CopyRight-->
-  <footer class="footer">
-    <div class="contact-section">
-      <div class="contact-message">
-        <h3>Contact</h3>
-        <p>저는 언제나 새로운 도전을 즐깁니다.<br>제 작업이 마음에 드셨다면, 언제든지 편하게 연락 주세요.</p>
-      </div>
-      <div class="contact-info">
-        <p> Gyeonggi-do, Korea</p>
-        <p><a href="mailto:dkjang@example.com">Whzhvkdl@gmail.com</a></p>
-        <p>+82 10-9163-6342</p>
-      </div>
-    </div>
-
-    <p class="copyright">© 2024 DK Jang. All rights reserved.</p>
-  </footer>
-  <script>
+<img alt="크리티카 이미지" src="images/kritika2.png" style="height:100%; width:100%; object-fit:cover;"/>
+</div>
+<div class="flex-grow-1 project-info" style="flex: 1 1 45%;">
+<h4>크리티카 (KRITIKA) | ALLM</h4>
+<p>Thrid-person | Action | MORPG | Proprietary Engine | PC</p>
+<p>February 2019 ~ February 2022</p>
+<p>담당 : Combat Designer </p>
+<ul class="custom-list" id="kritika-detail" style="display: block;">
+<li>전사(여), 귀검제 클래스 제작</li>
+<li>시공간술사, 헤일로메이지 초극 담당</li>
+<li>백운 외전 클래스 제작</li>
+<li>전 캐릭터 밸런스 개편</li>
+<li>어빌리티 시스템 레벨 연동 구조 개편을 통한 전 캐릭터 밸런스 조정</li>
+</ul>
+<button class="btn btn-outline-info btn-lg mt-2" onclick="showDetailTab('kritika')" style="margin-left: 1.5rem;">View more →</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<!--Prototypes-->
+<div id="Prototypes-list">
+<div class="container px-0 py-1" style="width: 20vw; max-width: 96%; margin: 0 auto;">
+<h2 class="section-title">Prototypes</h2>
+<!-- 프로토타입1 -->
+<div onclick="showDetailTab('Prototypes1')">
+<section class="Prototypes-block">
+<div class="Prototypes-card border border-secondary rounded-0 p-0 mb-0 w-100">
+<div class="row gx-4 align-items-center" style="overflow: hidden;">
+<div class="flex-shrink-0" style="flex: 1 1 100%; max-width: 100%; aspect-ratio: 16/9; overflow: hidden; position: relative; ">
+<img alt="프로토타입1 이미지" src="images/asurajang2.png" style="height:100%; width:100%; object-fit:cover;"/>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<!--CopyRight-->
+<footer class="footer">
+<div class="contact-section">
+<div class="contact-message">
+<h3>Contact</h3>
+<p>저는 언제나 새로운 도전을 즐깁니다.<br/>제 작업이 마음에 드셨다면, 언제든지 편하게 연락 주세요.</p>
+</div>
+<div class="contact-info">
+<p> Gyeonggi-do, Korea</p>
+<p><a href="mailto:dkjang@example.com">Whzhvkdl@gmail.com</a></p>
+<p>+82 10-9163-6342</p>
+</div>
+</div>
+<p class="copyright">© 2024 DK Jang. All rights reserved.</p>
+</footer>
+<script>
 
     let lastState = 'in';
 
@@ -588,11 +650,8 @@
       }
     }
   </script>
-
-  <button id="goTopBtn" onclick="scrollToTop()" style="display: none;" title="맨 위로">
-    <img alt="Go to top" src="images/GoToTop.png"
-      style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid #ccc; box-shadow: 0 2px 6px rgba(0,0,0,0.3);" />
-  </button>
+<button id="goTopBtn" onclick="scrollToTop()" style="display: none;" title="맨 위로">
+<img alt="Go to top" src="images/GoToTop.png" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid #ccc; box-shadow: 0 2px 6px rgba(0,0,0,0.3);"/>
+</button>
 </body>
-
 </html>

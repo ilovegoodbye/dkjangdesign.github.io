@@ -33,6 +33,41 @@
       text-align: center;
     }
 
+    .header-video-wrapper {
+      position: relative;
+      width: 100%;
+      height: 680px;
+      /* 원하는 세로 크기 */
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .header-video {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .header-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      text-align: center;
+      color: white;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 1rem 2rem;
+      border-radius: 8px;
+    }
+
     .project-block {
       padding-top: 1.5rem;
     }
@@ -45,6 +80,7 @@
 
     .project-info h4 {
       font-weight: 700;
+      padding-left: 1.5rem;
       font-size: 1.4rem;
       margin-bottom: 0.5rem;
       color: #fff;
@@ -53,6 +89,7 @@
     .project-info p {
       font-size: 0.75rem;
       color: #aaa;
+      padding-left: 1.5rem;
       margin-bottom: 1rem;
     }
 
@@ -62,7 +99,7 @@
 
     .custom-list {
       list-style: none;
-      padding-left: 0;
+      padding-left: 1.5rem;
       margin-top: 1rem;
     }
 
@@ -78,14 +115,6 @@
       margin-bottom: 6px;
     }
 
-    .project-block img {
-      transition: transform 1s ease, filter 1s ease;
-    }
-
-    .project-block:hover img {
-      clip-path: inset(-12% -12% -12% -12%);
-      filter: brightness(0.5);
-    }
 
     .project-card {
       cursor: pointer;
@@ -107,9 +136,18 @@
   <!--Header-->
   <header class="text-center py-4 border-bottom border-secondary">
     <h1 class="fw-bold mb-1">DK J</h1>
-    <h5 class="text-info mb-2">Action Game Designer</h5>
-    <p class="text-muted small">경기 성남 | 010-9163-6342 | Whzhvkdl@gmail.com</p>
+    <h5 class="text-secondary mb-2">Action Game Designer</h5>
+    <p class="text-secondary small">경기 성남 | 010-9163-6342 | Whzhvkdl@gmail.com</p>
   </header>
+  <div class="header-video-wrapper py-4 border-bottom ">
+    <video autoplay muted loop playsinline style="pointer-events: none;" class="header-video">
+      <source src="images/MainVideo.webm" type="video/webm">
+    </video>
+    <div class="header-overlay">
+      <h1>DaeKyu Jang</h1>
+      <p>Action Game Designer</p>
+    </div>
+  </div>
   <!-- 상세 페이지 탭 -->
   <div id="detail-tab" style="display: none; padding: 2rem;">
     <button class="btn btn-outline-light mb-4" onclick="goBack()">← 뒤로가기</button>
@@ -163,7 +201,7 @@
   </div>
   <!--Projects-->
   <div id="project-list">
-    <div class="container px-0 py-5" style="width: 93.1vw; max-width: 95%; margin: 0 auto;">
+    <div class="container px-0 py-5" style="width: 94.5vw; max-width: 95.5%; margin: 0 auto;">
       <h2 class="section-title">Projects</h2>
       <!-- 아수라장 -->
       <div onclick="showDetailTab('asura')">
@@ -222,7 +260,7 @@
   </div>
   <!--Prototypes-->
   <div id="Prototypes-list">
-    <div class="container px-0 py-1" style="width: 93.1vw; max-width: 95%; margin: 0 auto;">
+    <div class="container px-0 py-1" style="width: 93vw; max-width: 96%; margin: 0 auto;">
       <h2 class="section-title">Prototypes</h2>
       <!-- 프로토타입1 -->
       <div onclick="showDetailTab('Prototypes1')">

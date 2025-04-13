@@ -457,6 +457,45 @@
         -webkit-box-orient: vertical;
       }
     }
+
+
+    @media screen and (max-width: 768px) {
+
+      /* 영상 높이 제한 */
+      .header-video-wrapper {
+        height: 300px !important;
+      }
+
+      /* 프로젝트 블럭을 세로로 */
+      .project-block .row {
+        flex-direction: column !important;
+      }
+
+      .project-card {
+        max-width: 100% !important;
+        aspect-ratio: 16/9 !important;
+      }
+
+      .project-info {
+        width: 100% !important;
+        padding: 1rem;
+      }
+
+      /* custom-list 생략 처리 */
+      .custom-list {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+
+      .custom-list li {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
   </style>
 </head>
 
@@ -485,7 +524,7 @@
   <!-- 상세 페이지 탭 -->
   <div class="detail-tab" id="detail-tab" style="display: none;">
     <div class="detail-background" id="detail-background"></div>
-    <div id="detail-content" class="detail-content" style="background-color: rgba(0, 0, 0, 0.8);">
+    <div class="detail-content" id="detail-content" style="background-color: rgba(0, 0, 0, 0.8);">
       <h2 class="text-info">상세 페이지</h2>
       <p>여기에 클릭한 프로젝트의 상세 설명이 표시될 예정입니다.</p>
     </div>
@@ -507,20 +546,17 @@
             배틀로얄과 격투 액션이 결합된, 빠른 템포와 직관적인 전투를 강조한
             <span style="font-weight: 500; font-size: 1.02rem; color: #ffd000;">멀티플레이어 PvP 게임</span>입니다.
           </p>
-
           <p>
             플레이어는 다양한 캐릭터 중 하나를 선택해 고유한 스킬셋과 전투 스타일로 싸우며,
             <span style="font-weight: 500; font-size: 1.02rem; color: #ffd000;">‘링아웃’과 ‘난투’가 결합된 전투 시스템</span> 속에서
             예측 불가능한 상황을 돌파하고 최후의 생존자가 되기 위해 경쟁합니다.
           </p>
-
           <p>
             본 프로젝트에서
             <span style="font-weight: 500; font-size: 1.02rem; color: #ffd000;">전투 및 시스템 디자이너</span>로 참여하여,
             <strong>20명 이상의 개발진과 긴밀히 협업</strong>하며
             캐릭터 액션 설계, 전투 메커니즘 정의, 밸런싱, 리액션 설계 등을 전반적으로 담당하였습니다.
           </p>
-
           <p>
             시스템 설계에 그치지 않고,
             <span style="font-weight: 500; font-size: 1.02rem; color: #ffd000;">수십 개의 전투 액션을 직접 기획 및 Unreal Engine 5 기반
@@ -571,7 +607,8 @@
             특히 <span style="font-weight: 500; font-size: 1.02rem; color: #ffd000;">일본식 카타나 액션을 핵심으로 한 신규 직업 ‘귀검제’를 기획 및
               구현</span>하였으며,
             절제된 검격과 리듬감 있는 액션 연계를 설계하여,
-            출시 이후 <span style="font-weight: 500; font-size: 1.02rem; color: #ffd000;">한국 지역 평균 동시 접속자 수 약 43%</span>  상승이라는 유의미한 성과를 이끌어냈습니다.
+            출시 이후 <span style="font-weight: 500; font-size: 1.02rem; color: #ffd000;">한국 지역 평균 동시 접속자 수 약 43%</span>
+            상승이라는 유의미한 성과를 이끌어냈습니다.
           </p>
           <p>
             이와 함께 <span style="font-weight: 500; font-size: 1.02rem; color: #ffd000;">캐릭터 성능과 연출을 극대화하는 ‘초극’ 시스템</span>을
@@ -581,51 +618,47 @@
         </div>
         <h4 style="padding-left: 2.0rem">요약</h4>
         <ul class="detail-summary-list">
-            <li>
-              <span style="font-weight: 500; font-size: 1.02rem; color: #ffd000;">
-                크리티카 시공간술사 ‘아케인 프라임’ 초극 기획 및 딜 사이클 구조 리디자인
-              </span>
-              <div style="margin-left: 1.2em;">
-                아이템 의존 구조를 스킬 중심 메타로 전환하고, 테마 내러티브를 강화한 신규 스킬 4종 설계
-              </div>
-            </li>
-          
-            <li>
-              <span style="font-weight: 500; font-size: 1.02rem; color: #ffd000;">
-                여전사 클래스 신규 제작 및 ‘귀검제’ 전직 기획 리드
-              </span>
-              <div style="margin-left: 1.2em;">
-                지상·공중 전투 설계를 통한 무기 강화 경험 설계, 전직 캐릭터 3종의 전투 콘셉트 및 액션 구성 주도
-              </div>
-            </li>
-          
-            <li>
-              <span style="font-weight: 500; font-size: 1.02rem; color: #ffd000;">
-                전 캐릭터 밸런스 리드 및 DPS 메타 개선
-              </span>
-              <div style="margin-left: 1.2em;">
-                고레벨 딜링 구조 분석 후 전투 메타 예측 기반 밸런싱 로드맵 수립, 콤보 기반 액션의 재미를 강화하고 조작 난이도 이슈를 해결
-              </div>
-            </li>
-          
-            <li>
-              <span style="font-weight: 500; font-size: 1.02rem; color: #ffd000;">
-                ‘헤일로 메이지’ 초극 액션 리디자인 및 내러티브 강화
-              </span>
-              <div style="margin-left: 1.2em;">
-                핵심 콘셉트 스킬의 타격감을 보강하고, 연출력과 피해량을 개선한 신규 스킬 4종 제작
-              </div>
-            </li>
-          
-            <li>
-              <span style="font-weight: 500; font-size: 1.02rem; color: #ffd000;">
-                신규 외전 캐릭터 ‘백운’ 설계 및 전투 감각 구현
-              </span>
-              <div style="margin-left: 1.2em;">
-                부적과 기를 활용한 동물 형상 기반 액션 설계, 한국적 캐릭터 테마를 반영한 전투 스타일 구축
-              </div>
-            </li>
-          </ul>
+          <li>
+            <span style="font-weight: 500; font-size: 1.02rem; color: #ffd000;">
+              크리티카 시공간술사 ‘아케인 프라임’ 초극 기획 및 딜 사이클 구조 리디자인
+            </span>
+            <div style="margin-left: 1.2em;">
+              아이템 의존 구조를 스킬 중심 메타로 전환하고, 테마 내러티브를 강화한 신규 스킬 4종 설계
+            </div>
+          </li>
+          <li>
+            <span style="font-weight: 500; font-size: 1.02rem; color: #ffd000;">
+              여전사 클래스 신규 제작 및 ‘귀검제’ 전직 기획 리드
+            </span>
+            <div style="margin-left: 1.2em;">
+              지상·공중 전투 설계를 통한 무기 강화 경험 설계, 전직 캐릭터 3종의 전투 콘셉트 및 액션 구성 주도
+            </div>
+          </li>
+          <li>
+            <span style="font-weight: 500; font-size: 1.02rem; color: #ffd000;">
+              전 캐릭터 밸런스 리드 및 DPS 메타 개선
+            </span>
+            <div style="margin-left: 1.2em;">
+              고레벨 딜링 구조 분석 후 전투 메타 예측 기반 밸런싱 로드맵 수립, 콤보 기반 액션의 재미를 강화하고 조작 난이도 이슈를 해결
+            </div>
+          </li>
+          <li>
+            <span style="font-weight: 500; font-size: 1.02rem; color: #ffd000;">
+              ‘헤일로 메이지’ 초극 액션 리디자인 및 내러티브 강화
+            </span>
+            <div style="margin-left: 1.2em;">
+              핵심 콘셉트 스킬의 타격감을 보강하고, 연출력과 피해량을 개선한 신규 스킬 4종 제작
+            </div>
+          </li>
+          <li>
+            <span style="font-weight: 500; font-size: 1.02rem; color: #ffd000;">
+              신규 외전 캐릭터 ‘백운’ 설계 및 전투 감각 구현
+            </span>
+            <div style="margin-left: 1.2em;">
+              부적과 기를 활용한 동물 형상 기반 액션 설계, 한국적 캐릭터 테마를 반영한 전투 스타일 구축
+            </div>
+          </li>
+        </ul>
         <video controls="" src="media/asura_trailer.mp4" style="max-width: 100%; margin-top: 1rem;"></video>
       </div>
       <!--detail-prototype 시작-->
@@ -643,7 +676,7 @@
       <!--detail-storage 끝-->
     </div>
   </div>
-  </div>
+
   <!--Projects-->
   <div id="project-list">
     <div class="container px-0 py-5" style="width: 94.5vw; max-width: 95.5%; margin: 0 auto;">
@@ -718,7 +751,22 @@
             <div class="row gx-4 align-items-center" style="overflow: hidden;">
               <div class="flex-shrink-0"
                 style="flex: 1 1 100%; max-width: 100%; aspect-ratio: 16/9; overflow: hidden; position: relative; ">
-                <img alt="프로토타입1 이미지" src="images/asurajang2.png" style="height:100%; width:100%; object-fit:cover;" />
+                <img alt="프로토타입1 이미지" src="images/Prototype1.png" style="height:100%; width:100%; object-fit:cover;" />
+                <!-- 👇 텍스트 오버레이 추가 -->
+                <div style="
+                            position: absolute;
+                            bottom: 5%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            background: rgba(0, 0, 0, 0.6);
+                            color: white;
+                            padding: 0.3rem 1rem;
+                            font-size: 0.9rem;
+                            border-radius: 4px;
+                            text-align: center;
+                          ">
+                  스타일리쉬 락온 및 8방향 이동
+                </div>
               </div>
             </div>
           </div>

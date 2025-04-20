@@ -215,6 +215,37 @@
       margin-bottom: 6px;
     }
 
+    .detail-feature_list {
+      list-style: none;
+      padding-left: 1rem;
+      margin-top: 1rem;
+    }
+
+    .detail-feature_list li::before {
+      content: "●";
+      color: #2de5b4;
+      margin-right: 5px;
+    }
+
+    .detail-feature_list li {
+      color: #d6d6d6;
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+    }
+
+    .detail-feature_list li ul::before {
+      content: "-";
+      color: #d6d6d6;
+      margin-right: 8px;
+    }
+
+    .detail-feature_list li ul {
+      color: #d6d6d6;
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+
+
     .custom-list {
       list-style: none;
       padding-left: 1.5rem;
@@ -414,7 +445,7 @@
 
     .section-toggle-header:hover {
       transition: color 0.3s ease;
-      color:#888888;
+      color: #888888;
       background-color: #222;
       /* 약간 더 진한 톤 */
     }
@@ -566,6 +597,76 @@
         text-overflow: ellipsis;
       }
     }
+
+    /*플로우 구조 style*/
+    .flow-block {
+      padding: 1rem;
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 10px;
+      font-family: 'Inter', sans-serif;
+      color: #e0e0e0;
+    }
+
+    .flow-block h3 {
+      color: #00e0b8;
+      margin-bottom: 1rem;
+    }
+
+    .combat-table {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1.5fr;
+      column-gap: 0.1rem;
+      row-gap: 0.1rem;
+      padding: 1.2rem;
+      background-color: #121212;
+      border-radius: 12px;
+      border: 1px solid #333;
+      font-size: 14px;
+    }
+
+    .combat-cell {
+      padding: 8px 16px;
+      background-color: rgba(255, 255, 255, 0.02);
+      border-radius: 6px;
+    }
+
+    .combat-row:first-of-type {
+      border-top: none;
+    }
+
+    .combat-control {
+      font-size: 0.85rem;
+      color: #00e0b8;
+    }
+
+    .combat-situation {
+      font-size: 0.85rem;
+      color: #ff8c42;
+    }
+
+    .combat-intent {
+      font-size: 0.85rem;
+      color: #c586ff;
+    }
+
+    .character-block {
+      text-align: center;
+      /* 가운데 정렬 포인트 */
+      position: relative;
+      margin-bottom: 2rem;
+    }
+
+    .character-name {
+      display: inline-block;
+      margin-bottom: 0.6rem;
+      color: #d6d6d6;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 4px 14px;
+      border-radius: 8px;
+      text-shadow: 0 0 3px #00000044;
+    }
   </style>
 </head>
 
@@ -628,12 +729,12 @@
                 아수라장은 배틀로얄 전략과 격투 타격감을
                 결합한,
                 빠르고 직관적인 <strong style="color: #ff944d;">멀티플레이어 PvP 게임</strong>입니다. <br />
-                다양한 캐릭터로 ‘난투’와 ‘링아웃’이어우러진 예측불가 전투에서 최후의 생존자를 가립니다.
+                다양한 캐릭터로 ‘난투’와 ‘링아웃’이 어우러진 예측불가 전투에서 최후의 생존자를 가립니다.
               </p>
 
               <div
                 style=" background-color: rgba(255,255,255,0.05); border-left: 4px solid #ff944d; padding: 1rem 1.5rem; margin-top: 2rem; border-radius: 8px; color: #d6d6d6 ;">
-                본 프로젝트에서 <strong style="color: #ff944d;">전투 및 시스템 디자이너</strong>로 참여했습니다. <br />
+                본 프로젝트에서 <strong style="color: #ff944d;">전투 및 시스템 디자이너</strong>로 참여했습니다.
                 20명 이상의 개발진과 협업하며 전투 메커니즘 정의, 캐릭터 액션 설계, 밸런싱, 리액션 시스템 구축 등을 주도했습니다.
               </div>
             </div>
@@ -649,58 +750,56 @@
                 <li>링아웃 시스템</li>
               </ul>
             </div>
+
+            <!-- 기여 내용 -->
+            <h4 class="td-Maininfo mt-5 mb-3">MY CONTRIBUTIONS</h4>
+            <ul class="detail-summary-list">
+              <li>
+                <strong style="color: #ff944d;">캐릭터 약 5종 이상 액션 설계</strong>
+                <ul>무이무이</ul>
+                <ul>쇼요</ul>
+                <ul>웨이</ul>
+                <ul>에린</ul>
+                <ul>브룬</ul>
+              </li>
+              <li>
+                <strong style="color: #ff944d;">캐릭터 밸런싱 및 시뮬레이션</strong>
+                <ul>엑셀을 통한 수치 관리</ul>
+                <ul>엑셀을 통한 수치 시뮬레이션</ul>
+              </li>
+              <li>
+                <strong style="color: #ff944d;">랭킹 시스템 설계</strong>
+                <ul>Elo기반 점수 시스템 기획</ul>
+                <ul>랭킹 UI/UX 설계</ul>
+              </li>
+              <li>
+                <strong style="color: #ff944d;">튜토리얼 설계</strong>
+                <ul>튜토리얼에 필요한 기본적인 조작을 선정 및 관련 레벨 디자인 진행</ul>
+                <ul>중요 가이드, 팝업 가이드를 통한 정보 제공 시스템 기획</ul>
+                <ul>게임의 기본 룰을 알 수 있는 학습 시스템 설계</ul>
+              </li>
+              <li>
+                <strong style="color: #ff944d;">훈련장 기획</strong>
+                <ul>봇, 훈련장에 필요한 편의기능 관련 시스템 기획</ul>
+              </li>
+              <li>
+                <strong style="color: #ff944d;">미션 시스템 기획</strong>
+                <ul>일일, 주간, 시즌, 업적에 대한 보상 난도와 경험 설계 및 컨텐츠 기획</ul>
+              </li>
+              <li>
+                <strong style="color: #ff944d;">BT 봇 행동 설계</strong>
+                <ul>언리얼 Behaivor Tree를 통한 계층화된 AI 설계</ul>
+              </li>
+            </ul>
           </div>
-
-          <!-- 기여 내용 -->
-          <h4 class="td-Maininfo mt-5 mb-3">MY CONTRIBUTIONS</h4>
-          <ul class="detail-summary-list">
-            <li>
-              <strong style="color: #ff944d;">캐릭터 약 5종 이상 액션 설계</strong>
-              <ul>무이무이</ul>
-              <ul>쇼요</ul>
-              <ul>웨이</ul>
-              <ul>에린</ul>
-              <ul>브룬</ul>
-            </li>
-            <li>
-              <strong style="color: #ff944d;">캐릭터 밸런싱 및 시뮬레이션</strong>
-              <ul>엑셀을 통한 수치 관리</ul>
-              <ul>엑셀을 통한 수치 시뮬레이션</ul>
-            </li>
-            <li>
-              <strong style="color: #ff944d;">랭킹 시스템 설계</strong>
-              <ul>Elo기반 점수 시스템 기획</ul>
-              <ul>랭킹 UI/UX 설계</ul>
-            </li>
-            <li>
-              <strong style="color: #ff944d;">튜토리얼 설계</strong>
-              <ul>튜토리얼에 필요한 기본적인 조작을 선정 및 관련 레벨 디자인 진행</ul>
-              <ul>중요 가이드, 팝업 가이드를 통한 정보 제공 시스템 기획</ul>
-              <ul>게임의 기본 룰을 알 수 있는 학습 시스템 설계</ul>
-            </li>
-            <li>
-              <strong style="color: #ff944d;">훈련장 기획</strong>
-              <ul>봇, 훈련장에 필요한 편의기능 관련 시스템 기획</ul>
-            </li>
-            <li>
-              <strong style="color: #ff944d;">미션 시스템 기획</strong>
-              <ul>일일, 주간, 시즌, 업적에 대한 보상 난도와 경험 설계 및 컨텐츠 기획</ul>
-            </li>
-            <li>
-              <strong style="color: #ff944d;">BT 봇 행동 설계</strong>
-              <ul>언리얼 Behaivor Tree를 통한 계층화된 AI 설계</ul>
-            </li>
-          </ul>
-
 
           <!-- Character Design & Balance 토글 -->
           <div id="weapon-toggle-container" class="mb-3">
             <div class="d-flex justify-content-between align-items-center px-3 py-2 section-toggle-header"
-              id="weapon-toggle-button" style="cursor: pointer; "
-              onclick="toggleSection('weapon')">
+              id="weapon-toggle-button" style="cursor: pointer; " onclick="toggleSection('weapon')">
               <div class="d-flex align-items-center gap-2">
                 <span id="weapon-toggle-icon">＋</span>
-                <strong>Chracter Design & Balance</strong>
+                <strong>Character Design & Balance</strong>
               </div>
               <span id="weapon-toggle-arrow">›</span>
             </div>
@@ -708,54 +807,127 @@
               <!-- 여기에 무기 설명 내용 들어감 -->
               <!--무이무이-->
               <div class="row gx-5 gy-4 align-items-center mb-1">
-                <div class="col-md-6">
-                  <img src="images/image_muimui.png" class="img-fluid rounded" />
+                <div class="col-md-5">
+                  <div class="character-block">
+                    <div class="character-name"
+                      style="background-color: #2a2a2a; border: 1px solid #6C7B95; color: #fff;">
+                      무이무이 <span style="font-size: 0.9rem; font-weight: 400;">| 교란형 딜러</span>
+                    </div>
+                    <div class="character-card">
+                      <img src="images/image_muimui.png" class="img-fluid rounded" />
+                    </div>
+                  </div>
                 </div>
-                <div class="col-md-6">
-                  <h4 class="text-light">Taiga 21</h4>
-                  <ul class="feature_list">
-                    <li>Damage</li>
-                    <li>Spread</li>
-                    <li>Recoil</li>
-                    <li>Fire speed</li>
-                  </ul>
+                <div class="col-md-7">
+                  <div class="detail-feature_list">
+                    <li><strong style="color: #ff944d;">비주얼 컨셉</strong>
+                      <ul>정신 나간 간호사 / 통각 불능 광기</ul>
+                    </li>
+                    <li><strong style="color: #ff944d;">기획 포인트</strong>
+                      <ul><strong style="color: #57C4E5;">플레이 목적</strong>: 거리 혼란을 유도해 플레이어에게 조작 스트레스 부여</ul>
+                      <ul><strong style="color: #FF7847;">밸런싱 의도</strong>: 전 범위 공격 보유 대신, 상황 맞춤식 선택을 강제</ul>
+                      <ul><strong style="color: #B983FF ;">전투 철학</strong>: 사거리/타이밍/피드백의 불균형을 통해 ‘이상하다’는 감각을 설계</ul>
+                    </li>
+                  </div>
+                  <div class="combat-table">
+                    <div class="combat-cell" style="color:#00e0b8;">저스트 회피 → 회심의 일격 →</br> 공중 기본기 연계</div>
+                    <div class="combat-cell" style="color:#ff8c42;">근거리 견재</div>
+                    <div class="combat-cell" style="color:#c586ff;">근접 리스크 및 높은 딜 기대치</div>
+
+                    <div class="combat-cell" style="color:#00e0b8;">지상 기본기를 통한 견재</div>
+                    <div class="combat-cell" style="color:#ff8c42;">애매한 거리 대치</div>
+                    <div class="combat-cell" style="color:#c586ff;">근접 &lt; 중거리 &lt; 원거리 상성유도 가능 </div>
+
+                    <div class="combat-cell" style="color:#00e0b8;">특수기 차징을 통한 거리 증가</br>(낙차 조준 필요)</div>
+                    <div class="combat-cell" style="color:#ff8c42;">원거리 견재</div>
+                    <div class="combat-cell" style="color:#c586ff;">예측 실패 유도 / 사전 포지셔닝 강제</div>
+                  </div>
                 </div>
               </div>
               <!--라인-->
               <div style="border-top: 1px solid #444; margin-top: 1rem; margin-bottom: 1rem;"> </div>
               <!--쇼요-->
               <div class="row gx-5 gy-4 align-items-center mb-1 flex-md-row-reverse">
-                <div class="col-md-6">
-                  <img src="images/image_shoyo.png" class="img-fluid rounded" />
+                <div class="col-md-5">
+                  <div class="character-block">
+                    <div class="character-name"
+                      style="background-color: #2a2a2a; border: 1px solid #6C7B95; color: #fff;">
+                      쇼요 <span style="font-size: 0.9rem; font-weight: 400;">| 저격형 딜러</span>
+                    </div>
+                    <div class="character-card">
+                      <img src="images/image_shoyo.png" class="img-fluid rounded" />
+                    </div>
+                  </div>
                 </div>
-                <div class="col-md-6">
-                  <h4 class="text-light">M14</h4>
-                  <ul class="feature_list">
-                    <li>Damage</li>
-                    <li>Spread</li>
-                    <li>Recoil</li>
-                    <li>Fire speed</li>
-                  </ul>
-                </div>
-              </div>
-              <div style="border-top: 1px solid #444; margin-top: 1rem; margin-bottom: 1rem;"> </div>
-              <!--웨이-->
-              <div class="row gx-5 gy-4 align-items-center mb-1">
-                <div class="col-md-6">
-                  <img src="images/image_wei.png" class="img-fluid rounded" />
-                </div>
-                <div class="col-md-6">
-                  <h4 class="text-light">Taiga 21</h4>
-                  <ul class="feature_list">
-                    <li>Damage</li>
-                    <li>Spread</li>
-                    <li>Recoil</li>
-                    <li>Fire speed</li>
-                  </ul>
+                <div class="col-md-7">
+                  <div class="detail-feature_list">
+                    <li><strong style="color: #ff944d;">비주얼 컨셉</strong>
+                      <ul>유탄 사수 / 누님 섹시 저격</ul>
+                    </li>
+                    <li><strong style="color: #ff944d;">기획 포인트</strong>
+                      <ul><strong style="color: #57C4E5;">플레이 목적</strong>: 적의 거리를 벌리며 원거리에서 적을 공격</ul>
+                      <ul><strong style="color: #FF7847;">밸런싱 의도</strong>: 사정거리가 가장 길며, 예측 플레이를 요구</ul>
+                      <ul><strong style="color: #B983FF ;">전투 철학</strong>: 누구보다 멀리서 사격을 하여 '자주포'의 저격 느낌을 설계</ul>
+                    </li>
+                  </div>
+                  <div class="combat-table">
+                    <div class="combat-cell" style="color:#00e0b8;">회피 → 회피 공격</div>
+                    <div class="combat-cell" style="color:#ff8c42;">사거리 벌리기</div>
+                    <div class="combat-cell" style="color:#c586ff;">높은 기력소모와 거리를 벌리며 공격 기회 획득</div>
+
+                    <div class="combat-cell" style="color:#00e0b8;">지상 기본기를 통한 견재</div>
+                    <div class="combat-cell" style="color:#ff8c42;">애매한 거리 대치</div>
+                    <div class="combat-cell" style="color:#c586ff;">근접 &lt; 무이무이 &lt; 원거리 상성유도 가능</div>
+
+                    <div class="combat-cell" style="color:#00e0b8;">특수기 차징을 통한 거리 증가</br>(낙차 조준 필요)</div>
+                    <div class="combat-cell" style="color:#ff8c42;">원거리 견재</div>
+                    <div class="combat-cell" style="color:#c586ff;">예측 실패 유도 / 사전 포지셔닝 강제</div>
+                  </div>
                 </div>
               </div>
 
+              <!--라인-->
               <div style="border-top: 1px solid #444; margin-top: 1rem; margin-bottom: 1rem;"> </div>
+              <!--웨이-->
+              <div class="row gx-5 gy-4 align-items-center mb-1">
+                <div class="col-md-5">
+                  <div class="character-block">
+                    <div class="character-name"
+                      style="background-color: #2a2a2a; border: 1px solid #6C7B95; color: #fff;">
+                      웨이 <span style="font-size: 0.9rem; font-weight: 400;">| 근거리 탱커</span>
+                    </div>
+                    <div class="character-card">
+                      <img src="images/image_wei.png" class="img-fluid rounded" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="detail-feature_list">
+                    <li><strong style="color: #ff944d;">비주얼 컨셉</strong>
+                      <ul>퇴마가문의 당주 / 진지 여고생 카타나</ul>
+                    </li>
+                    <li><strong style="color: #ff944d;">기획 포인트</strong>
+                      <ul><strong style="color: #00E0B8;">플레이 목적</strong>: 초보자들도 쉽게 플레이 하기위한 저점이 높은 육각형 캐릭터</ul>
+                      <ul><strong style="color: #FF8C42;">밸런싱 의도</strong>: 모든 상황애 대처 가능하지만 직관적인 액션</ul>
+                      <ul><strong style="color: #C586FF ;">전투 철학</strong>: 아수라장 초보자들도 쉽게 근접딜러를 할 수 있게 설계</ul>
+                    </li>
+                  </div>
+                  <div class="combat-table">
+                    <div class="combat-cell" style="color:#00e0b8;">저스트 회피 → 회심의 일격 →</br> 공중 기본기 연계</div>
+                    <div class="combat-cell" style="color:#ff8c42;">근거리 견재</div>
+                    <div class="combat-cell" style="color:#c586ff;">근접 리스크 및 높은 딜 기대치</div>
+
+                    <div class="combat-cell" style="color:#00e0b8;">지상 기본기를 통한 견재</div>
+                    <div class="combat-cell" style="color:#ff8c42;">애매한 거리 대치</div>
+                    <div class="combat-cell" style="color:#c586ff;">근접 &lt; 무이무이 &lt; 원거리 상성유도 가능</div>
+
+                    <div class="combat-cell" style="color:#00e0b8;">특수기 차징을 통한 거리 증가</br>(낙차 조준 필요)</div>
+                    <div class="combat-cell" style="color:#ff8c42;">원거리 견재</div>
+                    <div class="combat-cell" style="color:#c586ff;">예측 실패 유도 / 사전 포지셔닝 강제</div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -772,7 +944,8 @@
         </div>
         <div class="detail-content">
           <p>
-            <span style="font-weight: 500; font-size: 1.02rem; color: #ff944d;">크리티카</span>는 '초' 액션 기반의 MORPG로, 빠르고
+            <span style="font-weight: 500; font-size: 1.02rem; color: #ff944d;">크리티카</span>는 '초' 액션 기반의 MORPG로,
+            빠르고
             호쾌한
             전투와 스타일리시한 스킬 액션이 강점인 게임입니다.
             플레이어는 각기 다른 전투 스타일을 지닌 클래스를 선택해 스테이지를 공략하며,
@@ -783,11 +956,13 @@
             프로그래머, 아티스트들과 협업하며 전투 밸런싱, 스킬 설계, 액션 타이밍 조정 등 전투 전반의 시스템을 담당했습니다.
           </p>
           <p>
-            특히 <span style="font-weight: 500; font-size: 1.02rem; color: #ff944d;">일본식 카타나 액션을 핵심으로 한 신규 직업 ‘귀검제’를 기획
+            특히 <span style="font-weight: 500; font-size: 1.02rem; color: #ff944d;">일본식 카타나 액션을 핵심으로 한 신규 직업 ‘귀검제’를
+              기획
               및
               구현</span>하였으며,
             절제된 검격과 리듬감 있는 액션 연계를 설계하여,
-            출시 이후 <span style="font-weight: 500; font-size: 1.02rem; color: #ff944d;">한국 지역 평균 동시 접속자 수 약 43%</span>
+            출시 이후 <span style="font-weight: 500; font-size: 1.02rem; color: #ff944d;">한국 지역 평균 동시 접속자 수 약
+              43%</span>
             상승이라는 유의미한 성과를 이끌어냈습니다.
           </p>
           <p>
@@ -842,6 +1017,7 @@
         </ul>
         <video controls="" src="media/asura_trailer.mp4" style="max-width: 100%; margin-top: 1rem;"></video>
       </div>
+
       <!--detail-prototype 시작-->
       <div id="detail-Prototypes1">
         <button class="btn btn-outline-light mt-1" onclick="goBack()">← 뒤로가기</button>
